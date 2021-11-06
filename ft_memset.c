@@ -1,9 +1,18 @@
 #include <stdio.h>
-#include "string.h"
+#include <string.h>
 
-int main(void)
+void	*ft_memset(void *b, int c, size_t len)
 {
- long unsigned  i = -16;
- printf("%lu", sizeof(unsigned int));
- return (0);   
+	unsigned char	*p;
+
+	p = (unsigned char *)b;
+	while (len--)
+		*p++ = (unsigned char) c;
+	return (b);
+}
+
+int	main(void)
+{
+	char *str = strdup("Hello my name is ouizar ");
+	printf("|%s|", ft_memset(str ,'*',5));
 }
