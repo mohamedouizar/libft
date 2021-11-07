@@ -6,14 +6,14 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 19:15:53 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/07 19:15:54 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/11/07 19:30:31 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*p;
 
