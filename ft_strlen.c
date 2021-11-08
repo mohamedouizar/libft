@@ -1,5 +1,5 @@
-#include <string.h>
-#include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -12,7 +12,7 @@ size_t	ft_strlen(const char *s)
 	}
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = ""; 
@@ -20,3 +20,4 @@ int	main(void)
 	printf("tlenth is :%zu\n",ft_strlen(str));
 	printf("true lenth is :%zu\n",strlen(str));
 }
+*/
