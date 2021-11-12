@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:03:35 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/05 19:39:10 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/11/12 18:40:20 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@
 
 int	ft_isdigit(int c)
 {
-	unsigned char	uc;
-
-	uc = (unsigned char) c;
-	if (uc < '0' || uc > '9')
-		return (0);
-	return (1);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
 /*
 int main (void)

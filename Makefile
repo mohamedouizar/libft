@@ -1,39 +1,31 @@
 NAME	= libft.a
 
 SRC	= $(wildcard *.c)
+#SRC_B = $()
 
-FLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 
 OBJ	= $(SRC:.c=.o)
-
-INCLUDE = .
+OBJ_b = $(SRC_B:.c=.o)
+INCLUDE = -I ./
 
 HEADER = libft.h
 
 TEST = test
 
-CC = gcc
+CC = cc
 
 RM = rm -f
 
 all: $(NAME)
 
-test:
-	$(CC) $(FLAGS) $(TEST)/$(FILE).c -L. -lft -o $(FILE).out -I $(INCLUDE)
-
-tclean:
-	$(RM) $(wildcard *.exe)
-	$(RM) $(wildcard *.txt)
-	$(RM) $(wildcard *.out)
 
 $(NAME): $(OBJ)
-	ar rc $@ $^
-	ranlib $@
+	ar rcs $(NAME) $(OBJ)
+	
 
-bonus: all
+bonus: $(OBJ_b)
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o ${<:.c=.o} -I $(INCLUDE)
 
 clean:
 	$(RM) $(OBJ)
