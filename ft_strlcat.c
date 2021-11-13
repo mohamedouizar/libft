@@ -17,21 +17,19 @@ size_t	ft_strlcat(char *  dst, const char *  src, size_t dstsize)
 		 i++;
 		 dst ++;
 	 }
-	 *dst = 0;
+	// *dst = 0;
 	}
 	return (ft_strlen(src) + ft_strlen(dst));
 }
-/*
+
 int main (void)
 {
-	char dst [20] = "";
-	char dst1 [20] = "";
+	char dst [20] = "hello";
+	char dst1 [20] = "hello";
 	char s1 [] = " world!";
 	char s [] = " world!";
-	ft_strlcat (dst, s, 0);
-	strlcat (dst1, s1, 0);
+	ft_strlcat (dst, s, 4);
+	strlcat (dst1, s1, 4);
 	printf("ft_strlcat:\t%s\n",dst);
 	printf("strlcat:\t%s\n",dst1);
-
 }
-*/
