@@ -17,10 +17,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main (int ac, char ** av)
 {
 	(void) ac ;
 	printf("%d\n",ft_memcmp(av[1],av[2],4));
 	printf("%d",memcmp(av[1],av[2],3));
-}
+}*/

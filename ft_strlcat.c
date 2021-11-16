@@ -6,30 +6,33 @@ size_t	ft_strlcat(char *  dst, const char *  src, size_t dstsize)
 {
 	size_t i;
 	size_t lendst;
+	size_t lensrc;
 
 	i = 0;
 	lendst = ft_strlen(dst);
-	if (dstsize > 0)
-	{
-	 while ( i < dstsize - 1)
-	 {
-		 dst[lendst] = src [i];
-		 i++;
-		 dst ++;
-	 }
-	// *dst = 0;
-	}
-	return (ft_strlen(src) + ft_strlen(dst));
-}
+	lensrc = ft_strlen(src);
+	if (dstsize == 0)
+        return (lensrc);
 
+    while (src[i] && (lendst + i) < (dstsize - 1))
+    {
+        dst[lendst + i] = src[i];
+        i++;
+    }
+    dst[lendst + i] = '\0';
+    if (dstsize >= lendst)
+        return (lendst + lensrc);
+    return (dstsize + lensrc);
+}
+/*
 int main (void)
 {
-	char dst [20] = "hello";
-	char dst1 [20] = "hello";
-	char s1 [] = " world!";
+	char dst [] = "hello";
 	char s [] = " world!";
+
+	int res = ft_strlcat (dst, s, 4);
 	ft_strlcat (dst, s, 4);
-	strlcat (dst1, s1, 4);
-	printf("ft_strlcat:\t%s\n",dst);
-	printf("strlcat:\t%s\n",dst1);
+	printf("result : \t %d\n",res);
+	printf("dest :\t%s",dst);
 }
+*/
