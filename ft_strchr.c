@@ -19,10 +19,11 @@ char *	ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
+
 int main (int ac,char ** av)
 {
 	printf("%s'\n",ft_strchr(av[1],'e'));
 	//printf("%s'\n",strchr(av[1],'e'));
 }
-*/
 
+*/

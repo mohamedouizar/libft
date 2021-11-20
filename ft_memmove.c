@@ -30,11 +30,11 @@ void *	ft_memmove(void *dst, const void *src, size_t len)
 int main (void)
 {
 	char s[] = "123456";
-	char s1[] = "123456";
+	//char s1[] = "123456";
 	ft_memmove(s +1,s,4);
-	memmove(s1 +1,s1,4);
+	//memmove(s1 +1,s1,4);
 	printf("ft_memov\t%s\n",s);
-	printf("memov\t%s",s1);
+	//printf("memov\t%s",s1);
 
 }
 */

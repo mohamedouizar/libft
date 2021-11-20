@@ -15,3 +15,12 @@ void ft_putnbr_fd(int nb, int fd)
 	}
 	ft_putchar_fd(n % 10 + '0',fd);
 }
+/*
+int main ()
+{
+	int fd = open("ouizarputnbr.txt",O_WRONLY | O_CREAT , 777);
+		ft_putnbr_fd(-1337,fd);
+		ft_putchar_fd('\n',fd);
+ 
+}
+*/
