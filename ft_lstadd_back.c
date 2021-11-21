@@ -11,7 +11,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 }
 
-
+/*
 void ft_affiche(t_list *node)
 {
 	t_list *ptr;
@@ -23,7 +23,7 @@ void ft_affiche(t_list *node)
 		ptr = ptr->next;
 
 	}
-}
+}*/
 /*
 int main()
 {
