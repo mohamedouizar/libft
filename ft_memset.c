@@ -6,12 +6,11 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 19:15:53 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/07 19:30:31 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/11/25 23:48:04 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -20,14 +19,15 @@ void	*ft_memset(void *b, int c, size_t len)
 	p = (unsigned char *)b;
 	while (len--)
 	{
-		*p++ = (unsigned char) c;
+		*p++= (unsigned char) c;
 	}
 	return (b);
 }
 /*
 int main (void)
 {
-	  char str[] = "mohamed ouizar";
-	 printf("%s/n",ft_memset(str,'*',3));
+	char a[] = "aaaaa";
+	memset(a,'p', 5);
+	 	printf("%s\n", a);
 }
 */

@@ -1,25 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 22:02:56 by mouizar           #+#    #+#             */
+/*   Updated: 2021/11/25 22:12:31 by mouizar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-char *	ft_strrchr(const char *s, int c)
+
+char	*ft_strrchr(const char *s, int c)
 {
-	char c1 = (char) c;
-	//int i = 0;
-	char * s1 = (char *) s;
-	int len;
+	char	*s1;
+	int		len;
+
 	len = 0;
-	while (s1[len])
-	len++ ;
-	
+	s1 = (char *) s;
+	while (*(s1 + len))
+		len++ ;
 	if (s1[0] == '\0')
 		return (NULL);
 	while (len >= 0 && ft_isascii(s1[len]))
 	{
-		if (s1[len] == c1)
-			return (&s1[len]);
+		if (s1[len] == c)
+			return (s1 + len);
 		len--;
-	//i++;
 	}
-	//printf("%zu",len);
 	return (NULL);
 }
 

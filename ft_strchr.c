@@ -1,29 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/25 20:43:29 by mouizar           #+#    #+#             */
+/*   Updated: 2021/11/26 00:09:19 by mouizar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *	ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char c1 = (char) c;
-	int i = 0;
-	char * s1 = (char *) s;
+	int		i;
+	char	*s1;
+
+	i = 0;
+	s1 = (char *) s;
 	i = ft_strlen(s1);
 	if (c == '\0')
-		return(s1 + i);
+		return (s1 + i);
 	i = 0;
-	while (s1[i])
+	while (*(s1 + i))
 	{
-		if (s1[i] == c1)
-			return (&s1[i]);
-		if (s1[i] != c1)
+		if (s1[i] == c)
+			return (s1 + i);
+		if (s1[i] != c)
 			i++;
 	}
 	return (NULL);
 }
 /*
-
-int main (int ac,char ** av)
+int main ()
 {
-	printf("%s'\n",ft_strchr(av[1],'e'));
-	//printf("%s'\n",strchr(av[1],'e'));
+	
+	printf("%s'\n",ft_strchr("abcdefgh",'e'));
+	printf("%s'\n",strchr("abcdefgh",'\0'));
 }
-
 */

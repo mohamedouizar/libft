@@ -7,7 +7,8 @@
 #include <stdio.h>
 #include <string.h>
 #include<fcntl.h> 
-#include<errno.h> 
+#include<errno.h>
+#include <ctype.h> 
 
 typedef struct s_list {
 void *content;
