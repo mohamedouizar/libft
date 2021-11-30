@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 01:44:04 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/26 02:32:01 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/11/28 00:55:20 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int	ft_atoi(const char *str)
 	}
 	return (res * signe);
 }
-/*
 
+/*
 int main ()
 {
-	printf("atoi\t%d\n",atoi("  -16l23"));
-	printf("ft_atoi\t%d\n",ft_atoi("  -16l23"));
+	printf("atoi\t%d\n",atoi("2036854775807"));
+	printf("ft_atoi\t%d\n",ft_atoi("2036854775807"));
 }
 */

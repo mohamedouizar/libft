@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:42:25 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/26 22:37:16 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/11/30 02:28:57 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 int	main(void)
 {
 	char dst[100] = "abcd";
-	const char src[] = "12345678910jlfdjlkkjfdlkjfdlkjfdkljfdkljfdljfdljfdljdflkkjfdkljdfklfdjlfdjlkfdjfdlkjfdkl";
+	const char src[] = "1234560jldkfdlkjfdkl";
 	ft_strlcpy(dst , src, 30);
 	printf("%s\n",dst);
 }

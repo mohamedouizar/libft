@@ -1,20 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/28 09:35:40 by mouizar           #+#    #+#             */
+/*   Updated: 2021/11/28 09:48:30 by mouizar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-		if (!s || !fd)
-			return ;
+	int	i;
 
-		int i=ft_strlen(s);
-		write(fd,s,i);	
+	i = ft_strlen(s);
+	if (!s || !fd)
+		return ;
+	write(fd, s, i);
 }
 /*
-int main ()
+int main()
 {
-	char *file="ouizarstr.txt";	
-	int fd= open(file,O_WRONLY | O_CREAT,0666);
-
-	ft_putstr_fd("hi ouizar is legend",fd);	
+	int fd = open("ouizarstr.txt",O_CREAT | O_WRONLY ,777);
+	ft_putstr_fd("ouizarmo jkbdhjbhjdbjdhjddhjdjkhjkdhjkdhjkdh",fd);
 }
 */

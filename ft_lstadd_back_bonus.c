@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 05:11:49 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/30 02:06:24 by mouizar          ###   ########.fr       */
+/*   Created: 2021/11/29 03:13:35 by mouizar           #+#    #+#             */
+/*   Updated: 2021/11/30 02:10:11 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (*lst != NULL)
+	t_list	*lastnode;
+
+	if (*lst)
 	{
-		ft_lstdelone(*lst, del);
-		*lst = (*lst)->next;
+		lastnode = ft_lstlast(*lst);
+		lastnode->next = new;
 	}
+	else
+		*lst = new;
 }
 /*
-void del(void * content)
-{
-	free(content);
-}
 void ft_affiche_liste(t_list *node)
 {
 	t_list *ptr = NULL;
@@ -43,23 +43,21 @@ int main ()
 	t_list *node3;
 	t_list *node4;
 	
-	char * content1 = ft_strdup("hello ");
-	char * content2 = ft_strdup(" my name ");
-	char * content3 = ft_strdup(" is ouizar.");
-	char * content4 = ft_strdup(" and im a legend.");
+	char  content1[] = "hello ";
+	char  content2[] = " my name ";
+	char  content3[] = " is ouizar.";
 
 	node1 = ft_lstnew(content1);
 	node2 = ft_lstnew(content2);
 	node3 = ft_lstnew(content3);
-	node4 = ft_lstnew(content4);
+	node4 = ft_lstnew(" And im a legend");
 
 	ft_lstadd_front(&head, node3);
 	ft_lstadd_front(&head, node2);
 	ft_lstadd_front(&head, node1);
 	ft_lstadd_back(&head, node4);
-	ft_lstsize(head);
-	printf("%d\n",ft_lstsize(head));
-	ft_lstclear(&head, del);
+	
 	ft_affiche_liste(head);
-	printf("%d\n",ft_lstsize(head));
+	//printf("%d",ft_lstsize(head));
+	//printf("%s\n",(char *)ft_lstlast(head)->content);	
 }*/

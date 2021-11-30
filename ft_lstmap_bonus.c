@@ -1,49 +1,55 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/30 02:02:41 by mouizar           #+#    #+#             */
+/*   Updated: 2021/11/30 02:05:47 by mouizar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+/*
 void  del(void * content)
 {
 	//content = ft_strdup("");
 	free (content);
 }
 
-
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
-{
-	t_list *new;
-	t_list *temp;
-	
-	new = NULL;
-//	temp = 
-	while (lst)
-	{
-		temp = ft_lstnew((f)(lst->content));
-		if (!temp)
-		{
-
-			ft_lstclear(&new ,del);
-			return 0 ;
-		}
-		lst=lst->next;		
-		ft_lstadd_back(&new,temp);
-	}
-
- return (new);
-}
-/*
 void  * f1(void * content)
 {
-	content = ft_strdup("a");
+	content = ft_strdup(" and im proud of myself");
 	return content;
 	//free (content);
 }
+*/
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*new;
+	t_list	*temp;
 
+	new = NULL;
+	while (lst)
+	{
+		temp = ft_lstnew(f(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&new, del);
+			return (0);
+		}
+		lst = lst->next;
+		ft_lstadd_back(&new, temp);
+	}
+	return (new);
+}
+/*
 void ft_print(t_list *node)
 {
-	//t_list *ptr;
-//	ptr = node;
 	while (node != NULL)
 	{
-		printf("%s\n",node->content);
+		printf("%s",node->content);
 		node = node->next;
 	}
 }
@@ -51,9 +57,10 @@ void ft_print(t_list *node)
 int main ()
 {
 
-	void *content = ft_strdup("abc"); 
-	void *content1 = ft_strdup("def"); 
-	void *content2 = ft_strdup("igh");
+
+	void *content = ft_strdup("hi "); 
+	void *content1 = ft_strdup(" im ouizar "); 
+	void *content2 = ft_strdup("im 25 years old.");
 
 	t_list *head=NULL;
 	t_list * node1;
@@ -67,9 +74,10 @@ int main ()
 	ft_lstadd_front(&head,node1);
 	ft_lstadd_back(&head,node2);
 	ft_lstadd_back(&head,node3);
-//	ft_lstdelone(node2,del);
-	 t_list *new=ft_lstmap(head,f1,del);
-ft_print(new);
+   	ft_print(head);
+printf("\n");
+   	t_list *new;
+   	new = ft_lstmap(head,f1,del);
+   	ft_print(new);
 
 }*/
-

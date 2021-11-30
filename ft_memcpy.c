@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 23:54:23 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/26 02:03:31 by mouizar          ###   ########.fr       */
+/*   Created: 2021/11/28 02:54:25 by mouizar           #+#    #+#             */
+/*   Updated: 2021/11/28 03:19:25 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,21 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*tdst;
 	const char	*tsrc;
 
-	tdst = (char *) dst;
-	tsrc = (const char *) src;
 	i = 0;
 	if (!dst && !src)
 		return (NULL);
+	if (dst == src)
+		return (dst);
+	tdst = (char *) dst;
+	tsrc = (const char *) src;
+	if (ft_strlen(tsrc) == 0 && ft_strlen(tdst) == 0)
+		return ("");
 	while (i < n)
-	{
 		*tdst++ = tsrc[i++];
-	}
 	return (dst);
 }
 
-/*
-int main (void)
-{
- 	char src[] = "abcd";
-	printf("%s",memcpy(src + 1,src,2));	
-}
-*/
+// int main (void)
+// {
+// 	printf("%s",ft_memcpy("","",5));	
+// }

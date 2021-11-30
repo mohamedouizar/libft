@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 07:17:38 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/26 07:22:08 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/11/27 20:36:10 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s1)
 	if (!str)
 		return (NULL);
 	while (*s1)
-		str[i++] = *s1++;	
+		str[i++] = *s1++;
 	str[i] = '\0';
 	return (str);
 }
