@@ -33,6 +33,7 @@ SRC_FILES = ft_isalnum.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c  \
+			ft_striteri.c \
 
 SRCB = 		ft_lstlast.c \
 			ft_lstadd_front.c \
@@ -42,7 +43,6 @@ SRCB = 		ft_lstlast.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_striteri.c \
 			ft_lstmap.c
 
 OBJ_FILES =	$(SRC_FILES:.c=.o)
@@ -67,5 +67,5 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean 
-.PHONY: clean fclean all re test
+re: fclean all 
+.PHONY: clean fclean all re 

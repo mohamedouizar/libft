@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 05:11:49 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/03 13:28:08 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 17:04:14 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	while (*lst != NULL)
+	t_list	*temp;
+
+	if (lst)
 	{
-		ft_lstdelone(*lst, del);
-		*lst = (*lst)->next;
+		while (*lst != NULL)
+		{
+			temp = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = temp;
+		}
 	}
 }
 /*

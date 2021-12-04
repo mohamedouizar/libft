@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 07:30:41 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/03 17:49:54 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 13:31:49 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*p;
 
-	i = 0;
+	i = -1;
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	p = (char *)malloc(sizeof(char) * len + 1);
 	if (!p)
 		return (NULL);
-	while (i < len)
-		p[i++] = s[start++];
+	while (++i < len)
+		p[i] = s[start++];
 	p[i] = '\0';
 	return (p);
 }

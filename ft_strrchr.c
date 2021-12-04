@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 22:02:56 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/03 19:26:27 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 16:03:05 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*s1;
-	int		len;
+	unsigned char	*s1;
+	int				len;
 
 	len = 0;
-	s1 = (char *) s;
+	s1 = (unsigned char *) s;
 	while (*(s1 + len))
 		len++ ;
 	if (!s1)
 		return (NULL);
 	while (len >= 0)
 	{
-		if (s1[len] == c)
-			return (s1 + len);
+		if (s1[len] == (unsigned char)c)
+			return ((char *)(s1 + len));
 		len--;
 	}
 	return (NULL);
@@ -35,6 +35,6 @@ char	*ft_strrchr(const char *s, int c)
 // int main (int ac,char ** av)
 // {
 // 	(void) ac ;
-// 	printf("%s'\n",ft_strrchr(av[1],'a'));
-// 	printf("%s'",strrchr(av[1],'a'));
+// 	printf("%s'\n",ft_strrchr("tripouille",'t' + 256));
+// 	printf("%s'",strrchr("tripouille",'t' + 256));
 // }

@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 21:14:01 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/04 01:38:16 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 15:56:18 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_compteur(const char *s, char c)
 			i++;
 		else
 		{
-			while (s[i] != c && s[i])
+			while (s[i] && s[i] != c)
 				i++;
 			w++;
 		}
@@ -33,10 +33,20 @@ size_t	ft_compteur(const char *s, char c)
 	return (w);
 }
 
+char	**ft_free(int j, char	**split)
+{
+	while (j >= 0)
+	{
+		free(split[j]);
+		j--;
+	}
+	free(split);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
-	size_t	size;
 	size_t	i;
 	size_t	j;
 	size_t	start;
@@ -45,25 +55,34 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	size = ft_compteur(s, c);
-	p = malloc(sizeof(char *) * (size + 1));
+	p = malloc(sizeof(char *) * (ft_compteur(s, c) + 1));
 	if (!p)
 		return (NULL);
-	while (j < size)
+	while (j < ft_compteur(s, c))
 	{
 		while (s[i] == c)
 			i++;
 		start = i;
-		while (s[i] != c && s[i])
+		while (s[i] && s[i] != c)
 			i++;
 		p[j++] = ft_substr(s, start, i - start);
+		if (!p[j - 1])
+			return (ft_free(j, p));
 	}
 	p[j] = NULL;
 	return (p);
 }
-//int main()
-// {
-//     char **s;
-//     s = ft_split("//////////", '/');
-//     printf("%p\n", s);
-// }
+/*
+int main()
+{
+     char **s;
+     s = ft_split("", 'a');
+//	int i = 0;
+//	while (s[i])
+//	{
+		printf("%p\n", s);
+//		i++;
+//	}
+	
+}
+*/
