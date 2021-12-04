@@ -6,13 +6,13 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 21:14:01 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/04 15:56:18 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 23:24:21 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_compteur(const char *s, char c)
+static size_t	ft_compteur(const char *s, char c)
 {
 	size_t	i;
 	size_t	w;
@@ -33,7 +33,7 @@ size_t	ft_compteur(const char *s, char c)
 	return (w);
 }
 
-char	**ft_free(int j, char	**split)
+static char	**ft_free(int j, char	**split)
 {
 	while (j >= 0)
 	{
@@ -72,17 +72,3 @@ char	**ft_split(char const *s, char c)
 	p[j] = NULL;
 	return (p);
 }
-/*
-int main()
-{
-     char **s;
-     s = ft_split("", 'a');
-//	int i = 0;
-//	while (s[i])
-//	{
-		printf("%p\n", s);
-//		i++;
-//	}
-	
-}
-*/

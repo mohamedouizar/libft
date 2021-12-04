@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 00:13:10 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/01 14:47:38 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 21:40:40 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int main (int ac, char ** av)
-{
-	(void) ac ;
-	printf("%d\n",ft_memcmp(av[1],av[2],1));
-	printf("%d",memcmp(av[1],av[2],1));
-}
-*/

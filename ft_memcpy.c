@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 02:54:25 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/04 16:01:45 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 22:02:37 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*tdst++ = tsrc[i++];
 	return (dst);
 }
-/*
- int main (void)
- {
-	
-     printf("%s",ft_memcpy("","",3));	
- }
-*/

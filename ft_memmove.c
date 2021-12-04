@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 03:14:12 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/25 04:42:20 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 22:05:10 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int main (void)
-{
- 	char src[] = "abcd";
-	printf("%s",ft_memmove(src + 1,src,2));	
-}
-*/
+ 
