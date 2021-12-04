@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 21:14:01 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/28 03:02:48 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/04 01:38:16 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	start;
 
-	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
+	i = 0;
+	j = 0;
 	size = ft_compteur(s, c);
 	p = malloc(sizeof(char *) * (size + 1));
 	if (!p)
@@ -54,18 +54,16 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		start = i;
-		while (s[i] != c)
+		while (s[i] != c && s[i])
 			i++;
 		p[j++] = ft_substr(s, start, i - start);
 	}
 	p[j] = NULL;
 	return (p);
 }
-/*
-int main()
-{
-    char **s;
-    s = ft_split("ouizar/is/legend", '/');
-    printf("%s\n", s[1]);
-}
-*/
+//int main()
+// {
+//     char **s;
+//     s = ft_split("//////////", '/');
+//     printf("%p\n", s);
+// }

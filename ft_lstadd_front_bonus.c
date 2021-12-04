@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 22:44:14 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/29 01:05:06 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/02 21:56:16 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,38 +18,33 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 }
 /*
-void ft_affiche_list(t_list *node)
+void ft_affiche(t_list *lst)
 {
-	t_list *ptr = NULL;
-	ptr = node;
-	while (ptr != NULL)
+	while (lst != NULL)
 	{
-		printf("%d\n",*(int *)ptr->content);
-		ptr = ptr ->next;
+		printf("%s",(char *)lst->content);
+		lst = lst->next;
 	}
 }
 int main()
 {
-	t_list *head = NULL;
-	t_list *node1 ;
-	t_list *node2 ;
-	t_list *node3 ;
-	 
-	 int nb1 = 10;
-	 int nb2 = 20;
-	 int nb3 = 30;
+	 t_list *head = NULL ;
+	// t_list *node1; = ft_lstnew(ft_strdup("hello "));
+	 //t_list *node2 = ft_lstnew(ft_strdup("my name is "));
+	// t_list *node3 = ft_lstnew(ft_strdup("ouizar"));
+	int i = 0 ;
 	
-	int *content1 = &nb1;
-	int *content2 = &nb2;
-	int *content3 = &nb3;
+	// ft_lstadd_front(&head,node3);
+	// ft_lstadd_front(&head,node2);
+	// ft_lstadd_front(&head,node1);
 
-	node1 = ft_lstnew(content1);
-	node2 = ft_lstnew(content2);
-	node3 = ft_lstnew(content3);
-
-	ft_lstadd_front(&head,node3);
-	ft_lstadd_front(&head,node2);	
-	ft_lstadd_front(&head,node1);	
+	while (i <= 20)
+	{
+		ft_lstadd_front(&head,ft_lstnew(ft_strdup("my name is ")));
+	 	i++;
+	 }
 	
-	ft_affiche_list(head);	
+	ft_affiche(head);
+	
+	//printf("%s",(char *)node1->next);
 }*/

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 10:47:08 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/28 22:40:31 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/03 17:53:06 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,3 @@ t_list	*ft_lstnew(void *content)
 	element -> next = NULL;
 	return (element);
 }
-/*
-int main ()
-{
-	printf("node content is %s",ft_lstnew("this is my first node")->content);
-}
-*/

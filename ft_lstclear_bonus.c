@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 05:11:49 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/30 02:06:24 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/03 13:28:08 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,8 @@ int main ()
 	ft_lstadd_front(&head, node2);
 	ft_lstadd_front(&head, node1);
 	ft_lstadd_back(&head, node4);
-	ft_lstsize(head);
 	printf("%d\n",ft_lstsize(head));
-	ft_lstclear(&head, del);
+	ft_lstclear(node2, del);
 	ft_affiche_liste(head);
 	printf("%d\n",ft_lstsize(head));
 }*/

@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 05:58:15 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/30 02:07:32 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/03 17:38:50 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (lst != NULL)
 	{
 		f(lst->content);
-			lst = (lst->next);
+			lst = lst->next;
 	}
 }
 

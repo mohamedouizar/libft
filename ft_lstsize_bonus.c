@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 01:12:30 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/30 02:08:33 by mouizar          ###   ########.fr       */
+/*   Created: 2021/12/03 17:55:52 by mouizar           #+#    #+#             */
+/*   Updated: 2021/12/03 17:55:57 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,39 +28,31 @@ int	ft_lstsize(t_list *lst)
 	return (count);
 }
 /*
-void ft_affiche_liste(t_list *node)
+void ft_affiche(t_list *head)
 {
-	t_list *ptr = NULL;
-	ptr = node ;
-	while(ptr != NULL)
+	while (head != NULL)
 	{
-		printf("%s",(char *)ptr->content);
-		ptr = ptr->next;
+		printf("%s\n",(char *)head->content);
+		printf("%d\n",ft_lstsize(head));
+		head = head->next;
 	}
 	
 }
-int main ()
+int main( )
 {
 	t_list *head = NULL;
-	t_list *node1;
-	t_list *node2;
-	t_list *node3;
+		int i;
+		i = 0;	
 	
-	char  content1[] = "hello ";
-	char  content2[] = " my name ";
-	char  content3[] = " is ouizar.";
 
-	node1 = ft_lstnew(content1);
-	node2 = ft_lstnew(content2);
-	node3 = ft_lstnew(content3);
+	while (i < 5000)
+	{
 
-	ft_lstadd_front(&head, node3);
-	ft_lstadd_front(&head, node2);
-	ft_lstadd_front(&head, node1);
+		ft_lstadd_front(&head,ft_lstnew("send nuds plz!\t"));
+		i++;
+	}
+
 	
-	ft_affiche_liste(head);
-	printf("%d",ft_lstsize(head));
-	
+	ft_affiche(head);
 }
-
 */
