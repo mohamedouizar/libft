@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 22:02:56 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/04 16:03:05 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 09:49:52 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int main (int ac,char ** av)
-// {
-// 	(void) ac ;
-// 	printf("%s'\n",ft_strrchr("tripouille",'t' + 256));
-// 	printf("%s'",strrchr("tripouille",'t' + 256));
-// }

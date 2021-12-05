@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 07:28:28 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/28 08:51:39 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 11:43:38 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned	int, char))
 	p[i] = '\0';
 	return (p);
 }
-/*
-char f(unsigned	int i, char  c)
-{
-	
-	c += 1;
-	return (c);
-}
-int main ()
-{
-	char str[] = "hello ouizar is legend";
-	char * p;
-	p = ft_strmapi(str,	f);
-	printf("%s",p);
-}
-*/

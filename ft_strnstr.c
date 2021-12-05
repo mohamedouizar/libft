@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 00:42:45 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/02 03:07:26 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 11:59:49 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main (int ac,char ** av)
-{
-	(void) ac;
-	printf("%s",ft_strnstr(av[1],av[2],6));
-}*/

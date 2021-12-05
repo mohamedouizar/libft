@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 04:13:21 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/30 23:27:39 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 09:48:48 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-/*
-int	main(void)
-{
-	//char str[] = "abc"; 
-	printf("tlenth is :%zu\n",ft_strlen(NULL));
-	//printf("true lenth is :%zu\n",strlen(NULL));
-}*/

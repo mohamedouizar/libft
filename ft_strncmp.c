@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 22:15:20 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/25 22:28:19 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 09:53:27 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return (sn1[i] - sn2[i]);
 }
-/*
-int main (int ac, char ** av)
-{
-	(void) ac ;
-	printf("%d\n",ft_strncmp(av[1],av[2],0));
-	//printf("%d\n",strncmp(av[1],av[2],0));
-}
-*/

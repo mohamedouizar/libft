@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 07:17:38 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/02 03:13:47 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 12:19:25 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int main ()
-{
-	char  str[] = "\0";
-	printf(":%s\t:\n",ft_strdup(str));
-	printf(":%s\t:",strdup(str));
-
-}*/

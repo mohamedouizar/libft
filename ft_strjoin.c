@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 07:46:48 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/02 04:11:00 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 15:15:38 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(p, s2, lens1 + lens2 + 1);
 	return (p);
 }
-/*
-int main ()
-{
-	char  s1[] = "12345";
-	char  s2[] = "6789";
-	printf(">>>>>> :%s",ft_strjoin(s1,s2));
-}*/

@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 08:53:04 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/02 04:54:18 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 11:43:42 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}	
 }
-/*
-void	f(unsigned	int i, char  *s)
-{
-	(void) i;
-	*s = 'a';
-}
-int main ()
-{
-	char str[] = "hello ouizar is legend";
-
-	ft_striteri (str, f);
-	printf ("%s",str);
-}*/

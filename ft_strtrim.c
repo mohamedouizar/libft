@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 08:17:21 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/02 04:18:11 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 12:17:52 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strtrim(char const	*s1, char const	*set)
 		ft_strlcpy(str, &s1[start], last - start + 1);
 	return (str);
 }
-/*
-int	main(void)
-{
-	//ft_strtrim("!!?Mohlmed!!", "   M?l!");
-	printf("%s\n", ft_strtrim("!!?Mohlmed!!", "   M?l!"));
-	return (0);
-}*/

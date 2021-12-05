@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 03:14:12 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/04 22:05:10 by mouizar          ###   ########.fr       */
+/*   Created: 2021/12/05 15:04:06 by mouizar           #+#    #+#             */
+/*   Updated: 2021/12/05 15:05:20 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
- 

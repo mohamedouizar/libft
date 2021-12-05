@@ -6,20 +6,15 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 02:18:57 by mouizar           #+#    #+#             */
-/*   Updated: 2021/12/04 15:32:56 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 15:11:04 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include<stdlib.h>
-# include<stddef.h>
 # include<unistd.h>
-# include<stdio.h>
-# include<string.h>
-# include<fcntl.h> 
-# include<errno.h>
-# include<ctype.h> 
 
 typedef struct s_list
 {
@@ -35,7 +30,6 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
-t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*ft_strdup(const char *s1);
 int		ft_isalpha(int c);
@@ -48,7 +42,6 @@ void	*ft_memset(void *b, int c, size_t len);
 size_t	ft_strlen(const char *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memcpy(void	*dst, const void	*src, size_t n);

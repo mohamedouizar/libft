@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:31:19 by mouizar           #+#    #+#             */
-/*   Updated: 2021/11/25 20:31:05 by mouizar          ###   ########.fr       */
+/*   Updated: 2021/12/05 09:52:24 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-/*
-int	main(void)
-{
-	printf("%c", ft_toupper('O'));
-}
-*/
